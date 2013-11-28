@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/white">
+
+    <!-- The PullToRefreshScrollView replaces a standard PullToRefreshScrollView widget. -->
+	<ListView 
+	    android:id="@+id/listview"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"/>
+	
+    <com.handmark.pulltorefresh.library.PullToRefreshHorizontalScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_horizontalscrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both" >
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" 
+            android:background="@android:color/white">
+
+			
+            <ListView 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:stackFromBottom="true"
+				android:transcriptMode="alwaysScroll"
+				android:singleLine="true"
+			    android:ellipsize="marquee"
+			    android:marqueeRepeatLimit="marquee_forever"
+			    android:scrollHorizontally="false"
+                android:id="@+id/listview1"/>
+            
+            <!--  
+	            <android.support.v4.view.ViewPager
+		        android:id="@+id/vp_list"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:textColor="@android:color/black"/>
+	        -->
+	        
+	        <!--  
+            <TextView
+                style="@style/HorizScrollViewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#ff99cc00" />
+
+            <TextView
+                style="@style/HorizScrollViewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#ffff4444" />
+
+            <TextView
+                style="@style/HorizScrollViewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#ff33b5e5" />
+
+            <TextView
+                style="@style/HorizScrollViewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#ffcc0000" />
+
+            <TextView
+                style="@style/HorizScrollViewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#ffffbb33" />
+
+            <TextView
+                style="@style/HorizScrollViewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#ff00ddff" />
+
+            <TextView
+                style="@style/HorizScrollViewItem"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="#ff669900" />
+            -->
+        </LinearLayout>
+        
+    </com.handmark.pulltorefresh.library.PullToRefreshHorizontalScrollView>
+
+</LinearLayout>
